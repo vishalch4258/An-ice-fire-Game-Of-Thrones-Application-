@@ -1,0 +1,23 @@
+<div class="container" style="text-align:center">
+  <div class="row" style="text-align:center">
+    <h2> </h2>
+    <div class="col-md-12" style="font-size:50px;color:rgb(26, 187, 5);font-style: unset;"> HOUSE INFORMATION
+    </div>
+    <br><br><br><br>
+  </div>
+  <div class="row" style="text-align:center">
+    <div *ngFor="let house of allHouses | paginate: { itemsPerPage: pageSize, currentPage: page ,totalItems : totalPage}" class="col-md-6">
+      <div class="panel panel-default">
+        <div class="list-group-item list-group-item-success ">{{house.name | uppercase}}</div>
+        <div class="list-group-item list-group-item-success ">
+          <p>region: {{house.region}} </p>
+        </div>
+        <div class="list-group-item list-group-item-success"> CoatOfArms: {{ house.coatOfArms }}
+          <br /><br /><a [routerLink]="['/house',house.id]" class="btn btn-success">Read</a>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>

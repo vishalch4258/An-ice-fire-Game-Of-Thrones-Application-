@@ -1,0 +1,28 @@
+<div style="text-align:center"></div>
+<div class="container"></div>
+    <div class="row" *ngIf="currentBook">
+      <div class="col-md-12">
+        <h2 class="list-group-item list-group-item-danger">{{currentBook.name}}</h2>
+        <!-- <small>book number - {{currentBook.bookId}}</small> -->
+        <p class="list-group-item list-group-item-danger">Posted by: {{currentBook.author}} on {{currentBook.released | date}}</p>
+        
+        <hr>
+       
+        <hr>
+        <h5 class="list-group-item list-group-item-danger">ISBN: {{currentBook.isbn}}</h5>
+        <h5 class="list-group-item list-group-item-danger">NumberOfPages: {{currentBook.numberOfPages}}</h5>
+        <h5 class="list-group-item list-group-item-danger">Country: {{currentBook.country}}</h5>
+        <h5 class="list-group-item list-group-item-danger">Publisher:{{currentBook.publisher}}</h5>
+        <h5 class="list-group-item list-group-item-danger">Url:{{currentBook.url}} </h5> 
+      </div>
+    </div>
+    <hr>
+    <div class="row" *ngIf="currentBook">
+     
+      <div class="col-md-6">
+
+        <a class="btn btn-danger"  [routerLink]="['/book']" >Go Back</a>
+      </div>
+    </div>
+  
+  

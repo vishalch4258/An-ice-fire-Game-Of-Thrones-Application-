@@ -1,0 +1,31 @@
+<div style="text-align:center"></div>
+<div class="container"></div>
+    <div class="row" *ngIf="currentHouse">
+      <div class="col-md-12">
+        <h2 class="list-group-item list-group-item-success">{{currentHouse.name}}</h2>
+        <!-- <small>book number - {{currentHouse.bookId}}</small> -->
+        <p class="list-group-item list-group-item-success"> Region: {{ currentHouse.region }} </p>
+        
+        <hr>
+        
+        <hr>
+        <h5 class="list-group-item list-group-item-success">Overlord: {{ currentHouse.overlord }}</h5>
+        <h5 class="list-group-item list-group-item-success">CoatOfArms:  {{ currentHouse.coatOfArms }}</h5>
+       <h3 class="list-group-item list-group-item-success">Words: {{ currentHouse.words}}</h3>
+       <h1 class="list-group-item list-group-item-success">SwornMembers: {{currentHouse.swornMembers }}</h1>
+        
+      </div>
+    </div>
+    <hr>
+    <div class="row" *ngIf="currentHouse">
+
+      <div class="col-md-4">
+
+        <a class="btn btn-success"  [routerLink]="['/house']" >Go Back</a>
+     
+      <div class="col-md-4">
+
+        
+    </div>
+  
+  

@@ -1,0 +1,17 @@
+html{
+    background-color: aqua;
+}
+
+
+.header{
+    background-color: blue;
+    background-image: url(2.jpg);
+    display: block;
+    color: silver;
+    padding: 12%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+  
+  
+  

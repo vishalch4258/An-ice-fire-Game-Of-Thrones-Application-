@@ -1,0 +1,25 @@
+<div class="container" style="text-align:center">
+  <div class="row" style="text-align:center">
+    <h2> </h2>
+    <div class="col-md-12" style="font-size:50px;color:#0634ff;font-style: unset;"> CHARACTER INFORMATION
+    </div>
+    <br><br><br><br>
+  </div>
+  <div class="row" style="text-align:center">
+    <div *ngFor="let character of allcharacters | paginate: { itemsPerPage: pageSize, currentPage: page , totalItems : totalPage}" class="col-md-6">
+
+      <div class="panel panel-default">
+        <div class="list-group-item list-group-item-primary">{{character.name | uppercase}}</div>
+        <div class="list-group-item list-group-item-primary"> Culture: {{ character.culture }}</div>
+        <div class="panel-body">
+          <p class="list-group-item list-group-item-primary"> Aliases: {{ character.aliases }}</p>
+        </div>
+        <div class="list-group-item list-group-item-primary">Url: {{character.url}}
+          <br /><br /><a [routerLink]="['/character',character.id]" class="btn btn-primary">Read</a>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>
